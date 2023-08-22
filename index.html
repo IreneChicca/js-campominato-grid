@@ -17,8 +17,15 @@
 
     <div class="container border bg-secondary p-3">
 
-        <div class="d-flex justify-content-center">
-            <button id="grid-btn" type="button" class="btn btn-warning mb-3 p-3">Genera Griglia</button>
+        <div class="d-flex justify-content-center mb-3">
+            <button id="grid-btn" type="button" class="btn btn-warning me-3">Genera Griglia</button>
+
+            <select id="difficulty" class="form-select w-25" aria-label="Default select example">
+                <option selected>Seleziona difficoltà</option>
+                <option value="100">Easy</option>
+                <option value="81">Medium</option>
+                <option value="49">Hard</option>
+            </select>
         </div>
 
         <ul id="cell-container" class="d-flex flex-wrap p-0">

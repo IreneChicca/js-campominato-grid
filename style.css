@@ -16,3 +16,20 @@
     color: darkblue;
 
 }
+
+
+.cell-easy {
+    width: 10%;
+
+}
+
+
+.cell-medium {
+
+    width: calc(100% / 9)
+}
+
+.cell-hard {
+
+    width: calc(100% / 7)
+}

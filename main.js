@@ -2,13 +2,13 @@
 
 const cellContainer = document.getElementById('cell-container');
 const btnGreed = document.getElementById('grid-btn');
+const difficultySelect = document.getElementById('difficulty');
 
-// definisco il numero di celle da stampare
-const cellTotal = 10 * 10;
+
 
 // RICHIAMO LA FUNZIONE CHE GENERA LA GRIGLIA ON LOAD
 
-generateGrid(cellTotal, cellContainer);
+// generateGrid(cellTotal, cellContainer);
 
 // E CICLO SULLA CELLA TANTE VOLTE QUANTE CELLE VOGLIO STAMPARE
 
@@ -16,8 +16,27 @@ generateGrid(cellTotal, cellContainer);
 // collego al bottone la creazione della griglia
 
 btnGreed.addEventListener('click', function () {
-    generateGrid(cellTotal, cellContainer)
 
+    //raccolgo l'informazione della difficoltà selezionata dall'utente
+    const difficulty = difficultySelect.value;
+
+    let cellTotal = 10 * 10;
+    if (difficulty == 2) {
+
+        // definisco il numero di celle da stampare
+        cellTotal = 9 * 9;
+
+    }
+    else if (difficulty == 3) {
+
+        // definisco il numero di celle da stampare
+        cellTotal = 7 * 7;
+
+    }
+
+
+    //richiamo la funzione che genera la griglia con le celle
+    generateGrid(cellTotal, cellContainer);
 })
 
 
@@ -58,5 +77,9 @@ function generateGrid(cellsNum, container) {
         generateCell(container, i);
 
     }
-
 }
+
+
+
+
+
