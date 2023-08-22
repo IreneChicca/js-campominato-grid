@@ -33,8 +33,14 @@ function generateCell(container, i) {
     // assegno classe alla cella così da poter modificare lo stile della cella in css
     cell.classList.add('cell');
 
-    // INSERISCO/APPENDO LA CELLA ALL'INTERNO DELLA PAGINA
 
+    //faccio colorare le celle al click
+    cell.addEventListener('click', function () {
+        cell.classList.add('cell-style')
+        console.log(i)
+    })
+
+    // INSERISCO/APPENDO LA CELLA ALL'INTERNO DELLA PAGINA
     container.append(cell);
 
 
