@@ -17,22 +17,8 @@ const difficultySelect = document.getElementById('difficulty');
 
 btnGreed.addEventListener('click', function () {
 
-    //raccolgo l'informazione della difficoltà selezionata dall'utente
-    const difficulty = difficultySelect.value;
-
-    let cellTotal = 10 * 10;
-    if (difficulty == 2) {
-
-        // definisco il numero di celle da stampare
-        cellTotal = 9 * 9;
-
-    }
-    else if (difficulty == 3) {
-
-        // definisco il numero di celle da stampare
-        cellTotal = 7 * 7;
-
-    }
+    //raccolgo l'informazione della difficoltà selezionata dall'utente e la utilizzo per generare il numero di celle relativo
+    let cellTotal = parseInt(difficultySelect.value);
 
 
     //richiamo la funzione che genera la griglia con le celle
